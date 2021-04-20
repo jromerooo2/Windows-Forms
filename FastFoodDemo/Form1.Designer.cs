@@ -262,7 +262,7 @@
             // 
             this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(594, 345);
+            this.button3.Location = new System.Drawing.Point(576, 371);
             this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(94, 34);
@@ -273,7 +273,8 @@
             // 
             // cuserName
             // 
-            this.cuserName.Location = new System.Drawing.Point(528, 232);
+            this.cuserName.BackColor = System.Drawing.Color.LightBlue;
+            this.cuserName.Location = new System.Drawing.Point(514, 262);
             this.cuserName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cuserName.Name = "cuserName";
             this.cuserName.Size = new System.Drawing.Size(208, 20);
@@ -282,7 +283,8 @@
             // 
             // cpassword
             // 
-            this.cpassword.Location = new System.Drawing.Point(528, 280);
+            this.cpassword.BackColor = System.Drawing.Color.LightBlue;
+            this.cpassword.Location = new System.Drawing.Point(514, 310);
             this.cpassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cpassword.Name = "cpassword";
             this.cpassword.Size = new System.Drawing.Size(208, 20);
@@ -293,7 +295,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10.8F);
-            this.label4.Location = new System.Drawing.Point(577, 258);
+            this.label4.Location = new System.Drawing.Point(563, 288);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(111, 20);
@@ -305,7 +307,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(590, 199);
+            this.label1.Location = new System.Drawing.Point(576, 229);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 20);
