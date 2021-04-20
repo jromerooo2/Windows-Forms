@@ -10,14 +10,16 @@ using System.Windows.Forms;
 
 namespace FastFoodDemo
 {
+    
     public partial class Form1 : Form
     {
+        static string user = "Fernanfloo";
+        static string contra = "chorizo";
         public Form1()
         {
             InitializeComponent();
             SidePanel.Height = button1.Height;
             SidePanel.Top = button1.Top;
-            firstCustomControl1.BringToFront();
             
         }
 
@@ -65,6 +67,33 @@ namespace FastFoodDemo
         private void mySecondCustmControl2_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void login1_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+           string usuario = cuserName.Text;
+           string password = cpassword.Text;
+
+            if (usuario == user && password == contra)
+            {
+                mySecondCustmControl1.BringToFront();
+            }
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cpassword_TextChanged(object sender, EventArgs e)
+        {
+            cpassword.UseSystemPasswordChar = true;
         }
     }
 }

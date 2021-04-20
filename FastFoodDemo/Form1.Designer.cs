@@ -44,6 +44,13 @@
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.cuserName = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.cpassword = new System.Windows.Forms.TextBox();
+            this.login1 = new FastFoodDemo.Login();
             this.integrantesCustomControl1 = new FastFoodDemo.IntegrantesCustomControl();
             this.mySecondCustmControl1 = new FastFoodDemo.MySecondCustmControl();
             this.firstCustomControl1 = new FastFoodDemo.FirstCustomControl();
@@ -57,6 +64,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.SidePanel);
@@ -254,6 +263,56 @@
             this.button13.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button13.UseVisualStyleBackColor = true;
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(397, 437);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(126, 42);
+            this.button3.TabIndex = 9;
+            this.button3.Text = "Iniciar Sesion";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // cuserName
+            // 
+            this.cuserName.Location = new System.Drawing.Point(338, 334);
+            this.cuserName.Name = "cuserName";
+            this.cuserName.Size = new System.Drawing.Size(276, 22);
+            this.cuserName.TabIndex = 10;
+            this.cuserName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(338, 457);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(276, 22);
+            this.textBox2.TabIndex = 10;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(260, 457);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 22);
+            this.textBox3.TabIndex = 11;
+            // 
+            // cpassword
+            // 
+            this.cpassword.Location = new System.Drawing.Point(338, 398);
+            this.cpassword.Name = "cpassword";
+            this.cpassword.Size = new System.Drawing.Size(276, 22);
+            this.cpassword.TabIndex = 11;
+            this.cpassword.TextChanged += new System.EventHandler(this.cpassword_TextChanged);
+            // 
+            // login1
+            // 
+            this.login1.Location = new System.Drawing.Point(3, 0);
+            this.login1.Name = "login1";
+            this.login1.Size = new System.Drawing.Size(1761, 770);
+            this.login1.TabIndex = 8;
+            this.login1.Load += new System.EventHandler(this.login1_Load_1);
+            // 
             // integrantesCustomControl1
             // 
             this.integrantesCustomControl1.Location = new System.Drawing.Point(368, 205);
@@ -282,6 +341,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1343, 718);
+            this.Controls.Add(this.cpassword);
+            this.Controls.Add(this.cuserName);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.login1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.integrantesCustomControl1);
             this.Controls.Add(this.mySecondCustmControl1);
@@ -298,12 +361,14 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -327,6 +392,13 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private IntegrantesCustomControl integrantesCustomControl1;
+        private Login login1;
+        private System.Windows.Forms.Button button3;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.TextBox cuserName;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox cpassword;
     }
 }
 
