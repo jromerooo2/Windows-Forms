@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FastFoodDemo
 {
-    public partial class MySecondCustmControl : UserControl
+    public partial class MySecondCustmControl1 : UserControl
     {
-        public MySecondCustmControl()
+        public MySecondCustmControl1()
         {
             InitializeComponent();
         }

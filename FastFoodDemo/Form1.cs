@@ -15,20 +15,40 @@ namespace FastFoodDemo
     {
         static string user = "Fernanfloo";
         static string contra = "chorizo";
+
         public Form1()
         {
             InitializeComponent();
             SidePanel.Height = button1.Height;
             SidePanel.Top = button1.Top;
             SidePanel.BringToFront();
+            login2.BringToFront();
+            textUsername.BringToFront();
+            textPasswors.BringToFront();
+            button4.BringToFront();
+            alert.BringToFront();
+            alert.Hide();
+        }
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            panel1.BringToFront();
         }
 
+
+        private void mySecondCustmControl_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void firstCustmControl1_Load(object sender, EventArgs e)
+        {
+
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             SidePanel.Show();
             SidePanel.Height = button1.Height;
             SidePanel.Top = button1.Top;
-            firstCustomControl1.BringToFront();
+            firstCustomControl2.BringToFront();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -36,14 +56,31 @@ namespace FastFoodDemo
             SidePanel.Show();
             SidePanel.Height = button2.Height;
             SidePanel.Top = button2.Top;
-            mySecondCustmControl1.BringToFront();
+            mySecondCustmControl11.BringToFront();
          
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
-            integrantesCustomControl1.BringToFront();
+            integrantesCustomControl11.BringToFront();
             SidePanel.Hide();
+        }
+        private void textBox2_TextChanged_1(object sender, EventArgs e)
+        {
+            textPasswors.UseSystemPasswordChar = true;
+        }
+        private void button4_Click(object sender, EventArgs e)
+        {
+           bool allowed = textUsername.Text == user && textPasswors.Text == contra ? true : false ;
+            if (allowed)
+            {
+                firstCustomControl2.BringToFront();
+                alert.Hide();
+            }
+            else
+            {
+                alert.Show();
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -51,52 +88,18 @@ namespace FastFoodDemo
 
         }
 
-        private void login1_Load(object sender, EventArgs e)
+        private void cpassword_TextChanged(object sender, EventArgs e)
         {
             
-        }
-
-
-
-        private void mySecondCustmControl3_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mySecondCustmControl2_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void login1_Load_1(object sender, EventArgs e)
-        {
-
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
 
-            if (cuserName.Text == user && cpassword.Text == contra)
-            {
-                mySecondCustmControl1.BringToFront();
-            }
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void cpassword_TextChanged(object sender, EventArgs e)
-        {
-            cpassword.UseSystemPasswordChar = true;
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -128,9 +131,23 @@ namespace FastFoodDemo
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void userName_TextChanged(object sender, EventArgs e)
         {
-            panel1.BringToFront();
+
+        }
+
+
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
     }
