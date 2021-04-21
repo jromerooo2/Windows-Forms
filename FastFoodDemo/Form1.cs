@@ -20,7 +20,7 @@ namespace FastFoodDemo
             InitializeComponent();
             SidePanel.Height = button1.Height;
             SidePanel.Top = button1.Top;
-            
+            SidePanel.BringToFront();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -37,8 +37,7 @@ namespace FastFoodDemo
             SidePanel.Height = button2.Height;
             SidePanel.Top = button2.Top;
             mySecondCustmControl1.BringToFront();
-
-
+         
         }
 
         private void button14_Click(object sender, EventArgs e)
@@ -76,10 +75,8 @@ namespace FastFoodDemo
 
         private void button3_Click(object sender, EventArgs e)
         {
-           string usuario = cuserName.Text;
-           string password = cpassword.Text;
 
-            if (usuario == user && password == contra)
+            if (cuserName.Text == user && cpassword.Text == contra)
             {
                 mySecondCustmControl1.BringToFront();
             }
@@ -115,5 +112,26 @@ namespace FastFoodDemo
         {
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            panel1.BringToFront();
+        }
     }
-}
+    }
+
