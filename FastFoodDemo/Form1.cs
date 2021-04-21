@@ -71,8 +71,8 @@ namespace FastFoodDemo
         }
         private void button4_Click(object sender, EventArgs e)
         {
-            string username = textUsername.Text;
-            string password = textPasswors.Text;
+            string username = textUsername.Text.Trim();
+            string password = textPasswors.Text.Trim();
 
            bool allowed = username.ToLower() == user && password.ToLower() == contra ? true : false ;
             if (allowed)
