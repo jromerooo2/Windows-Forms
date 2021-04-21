@@ -34,7 +34,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.gdghd = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -42,7 +42,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PeachPuff;
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.gdghd);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label4);
@@ -100,14 +100,14 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Ramen con leche";
             // 
-            // label2
+            // gdghd
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "label2";
+            this.gdghd.AutoSize = true;
+            this.gdghd.Location = new System.Drawing.Point(16, 200);
+            this.gdghd.Name = "gdghd";
+            this.gdghd.Size = new System.Drawing.Size(33, 13);
+            this.gdghd.TabIndex = 2;
+            this.gdghd.Text = "gg ez";
             // 
             // MySecondCustmControl
             // 
@@ -131,6 +131,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label gdghd;
     }
 }
