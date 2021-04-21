@@ -13,7 +13,7 @@ namespace FastFoodDemo
     
     public partial class Form1 : Form
     {
-        static string user = "Fernanfloo";
+        static string user = "fernanfloo";
         static string contra = "chorizo";
 
         public Form1()
@@ -71,7 +71,10 @@ namespace FastFoodDemo
         }
         private void button4_Click(object sender, EventArgs e)
         {
-           bool allowed = textUsername.Text == user && textPasswors.Text == contra ? true : false ;
+            string username = textUsername.Text;
+            string password = textPasswors.Text;
+
+           bool allowed = username.ToLower() == user && password.ToLower() == contra ? true : false ;
             if (allowed)
             {
                 firstCustomControl2.BringToFront();
