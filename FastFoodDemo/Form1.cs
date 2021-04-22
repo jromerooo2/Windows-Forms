@@ -13,7 +13,7 @@ namespace FastFoodDemo
 
     public partial class Form1 : Form
     {
-        static string[] user = { "fernanfloo", "JosueGuinea", "JhansiAguilar"};
+        static string[] user = { "Fernanfloo", "JosueGuinea", "JhansiAguilar"};
         static string[] contra = { "chorizo", "auronplay", "rubius" };
 
         public Form1()
@@ -71,21 +71,34 @@ namespace FastFoodDemo
         }
         private void button4_Click(object sender, EventArgs e)
         {
-            bool allowed;
+            bool allowed = false;
             string username = textUsername.Text.Trim();
             string password = textPasswors.Text.Trim();
-
-            for (int i = 0; i < user.Length; i++)
+            foreach (string x in user)
             {
-                for (int p = 0; p  < contra.Length; p ++)
+                if (username.Contains(x))
                 {
-                    if(password.ToLower() == contra[p] && username.ToLower() == user[i])
-                    {
-                        allowed = true;
-                    }
+                    allowed = true;
                 }
             }
-            if (allowed = true)
+            foreach (string x in contra)
+            {
+                if (password.Contains(x))
+                {
+                    allowed = true;
+                }
+            }
+            //for (int c = 0; c == contra.Length; c++)
+            //{
+            //    for (int u = 0; u == user.Length; u++)
+            //    {
+            //        if (password == contra[c] && username == user[u])
+            //        {
+            //            allowed = true;
+            //        }
+            //    }
+            //}
+            if (allowed == true)
             {
                 firstCustomControl2.BringToFront();
                 alert.Hide();
