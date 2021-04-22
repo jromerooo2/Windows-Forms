@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace FastFoodDemo
 {
-    
+
     public partial class Form1 : Form
     {
-        static string user = "fernanfloo";
-        static string contra = "chorizo";
+        static string[] user = { "fernanfloo", "JosueGuinea", "JhansiAguilar"};
+        static string[] contra = { "chorizo", "auronplay", "rubius" };
 
         public Form1()
         {
@@ -71,11 +71,21 @@ namespace FastFoodDemo
         }
         private void button4_Click(object sender, EventArgs e)
         {
+            bool allowed;
             string username = textUsername.Text.Trim();
             string password = textPasswors.Text.Trim();
 
-           bool allowed = username.ToLower() == user && password.ToLower() == contra ? true : false ;
-            if (allowed)
+            for (int i = 0; i < user.Length; i++)
+            {
+                for (int p = 0; p  < contra.Length; p ++)
+                {
+                    if(password.ToLower() == contra[p] && username.ToLower() == user[i])
+                    {
+                        allowed = true;
+                    }
+                }
+            }
+            if (allowed = true)
             {
                 firstCustomControl2.BringToFront();
                 alert.Hide();

@@ -287,13 +287,20 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(484, 417);
+            this.button4.BackColor = System.Drawing.Color.LightSalmon;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RosyBrown;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Brown;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Corbel", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(543, 426);
             this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(116, 19);
+            this.button4.Size = new System.Drawing.Size(150, 30);
             this.button4.TabIndex = 21;
             this.button4.Text = "Iniciar Sesion";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // alert
@@ -301,16 +308,17 @@
             this.alert.AutoSize = true;
             this.alert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.alert.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.alert.Location = new System.Drawing.Point(467, 443);
+            this.alert.Location = new System.Drawing.Point(519, 470);
             this.alert.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.alert.Name = "alert";
-            this.alert.Size = new System.Drawing.Size(174, 13);
+            this.alert.Padding = new System.Windows.Forms.Padding(5);
+            this.alert.Size = new System.Drawing.Size(184, 23);
             this.alert.TabIndex = 22;
             this.alert.Text = "Tu usuario o contra son incorrectos";
             // 
             // textPasswors
             // 
-            this.textPasswors.Location = new System.Drawing.Point(474, 372);
+            this.textPasswors.Location = new System.Drawing.Point(543, 346);
             this.textPasswors.Margin = new System.Windows.Forms.Padding(2);
             this.textPasswors.Name = "textPasswors";
             this.textPasswors.Size = new System.Drawing.Size(145, 20);
@@ -319,7 +327,7 @@
             // 
             // textUsername
             // 
-            this.textUsername.Location = new System.Drawing.Point(470, 303);
+            this.textUsername.Location = new System.Drawing.Point(543, 262);
             this.textUsername.Margin = new System.Windows.Forms.Padding(2);
             this.textUsername.Name = "textUsername";
             this.textUsername.Size = new System.Drawing.Size(145, 20);
@@ -329,7 +337,8 @@
             // login2
             // 
             this.login2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.login2.Location = new System.Drawing.Point(214, 0);
+            this.login2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login2.Location = new System.Drawing.Point(214, -3);
             this.login2.Margin = new System.Windows.Forms.Padding(2);
             this.login2.Name = "login2";
             this.login2.Size = new System.Drawing.Size(707, 583);
