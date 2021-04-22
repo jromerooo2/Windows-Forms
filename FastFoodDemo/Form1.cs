@@ -152,6 +152,26 @@ namespace FastFoodDemo
         {
 
         }
+
+        private void firstCustomControl2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void integrantesCustomControl11_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void login2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

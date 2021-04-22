@@ -36,5 +36,10 @@ namespace FastFoodDemo
         {
 
         }
+
+        private void FirstCustomControl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
