@@ -71,11 +71,10 @@ namespace FastFoodDemo
         }
         private void button4_Click(object sender, EventArgs e)
         {
-            bool allowed = false;
             string username = textUsername.Text.Trim();
             string password = textPasswors.Text.Trim();
 
-            if (textUsername.Text.Length == 0 && textPasswors.Text.Length == 0 )
+            if (username.Length == 0 && password.Length == 0 )
             {
                 alert.Show();
             }
@@ -85,19 +84,16 @@ namespace FastFoodDemo
                 {
                     if (user[i].Contains(username) && contra[i].Contains(password))
                     {
-                        allowed = true;
+                        firstCustomControl2.BringToFront();
+                        alert.Hide();
+                    }
+                    else
+                    {
+                        alert.Show();
                     }
 
                 }
-                if (allowed)
-                {
-                    firstCustomControl2.BringToFront();
-                    alert.Hide();
-                }
-                else
-                {
-                    alert.Show();
-                }
+
             }
 
 
