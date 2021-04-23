@@ -79,7 +79,7 @@
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(18, 74);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(21, 24);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -196,7 +196,7 @@
             this.button3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(604, 396);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(118, 60);
             this.button3.TabIndex = 9;
@@ -208,7 +208,7 @@
             // 
             this.userName.BackColor = System.Drawing.Color.White;
             this.userName.Location = new System.Drawing.Point(555, 228);
-            this.userName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.userName.Margin = new System.Windows.Forms.Padding(2);
             this.userName.Name = "userName";
             this.userName.Size = new System.Drawing.Size(208, 20);
             this.userName.TabIndex = 10;
@@ -219,7 +219,7 @@
             // 
             this.cpassword.BackColor = System.Drawing.Color.White;
             this.cpassword.Location = new System.Drawing.Point(555, 322);
-            this.cpassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cpassword.Margin = new System.Windows.Forms.Padding(2);
             this.cpassword.Name = "cpassword";
             this.cpassword.Size = new System.Drawing.Size(208, 20);
             this.cpassword.TabIndex = 11;
@@ -295,7 +295,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Corbel", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(543, 426);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(150, 30);
             this.button4.TabIndex = 21;
@@ -308,13 +308,13 @@
             this.alert.AutoSize = true;
             this.alert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.alert.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.alert.Location = new System.Drawing.Point(519, 470);
+            this.alert.Location = new System.Drawing.Point(515, 482);
             this.alert.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.alert.Name = "alert";
             this.alert.Padding = new System.Windows.Forms.Padding(5);
-            this.alert.Size = new System.Drawing.Size(184, 23);
+            this.alert.Size = new System.Drawing.Size(207, 23);
             this.alert.TabIndex = 22;
-            this.alert.Text = "Tu usuario o contra son incorrectos";
+            this.alert.Text = "Tu usuario o contraseña son incorrectos";
             // 
             // textPasswors
             // 
