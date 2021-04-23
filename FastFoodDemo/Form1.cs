@@ -71,7 +71,6 @@ namespace FastFoodDemo
         }
         private void button4_Click(object sender, EventArgs e)
         {
-            bool allowed = false;
             string username = textUsername.Text.Trim();
             string password = textPasswors.Text.Trim();
 
@@ -79,18 +78,15 @@ namespace FastFoodDemo
             {
                 if (user[i].Contains(username) && contra[i].Contains(password))
                 {
-                    allowed = true;
-                }   
+                    firstCustomControl2.BringToFront();
+                    alert.Hide();
+                }
+                else
+                {
+                    alert.Show();
+                }
             }
-            if (allowed == true)
-            {
-                firstCustomControl2.BringToFront();
-                alert.Hide();
-            }
-            else
-            {
-                alert.Show();
-            }
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
