@@ -73,8 +73,10 @@ namespace FastFoodDemo
         {
             string username = textUsername.Text.Trim();
             string password = textPasswors.Text.Trim();
+            bool emptyOrNot = String.IsNullOrEmpty(username);
+            bool emptyPaswword = String.IsNullOrEmpty(password);
 
-            if (username.Length == 0 && password.Length == 0 )
+            if (emptyOrNot && emptyPaswword)
             {
                 alert.Show();
             }
