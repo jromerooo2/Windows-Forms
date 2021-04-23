@@ -74,30 +74,14 @@ namespace FastFoodDemo
             bool allowed = false;
             string username = textUsername.Text.Trim();
             string password = textPasswors.Text.Trim();
-            foreach (string x in user)
+
+            for (int i = 0; i < user.Length; i++)
             {
-                if (username.Contains(x))
+                if (user[i].Contains(username) && contra[i].Contains(password))
                 {
                     allowed = true;
-                }
+                }   
             }
-            foreach (string x in contra)
-            {
-                if (password.Contains(x))
-                {
-                    allowed = true;
-                }
-            }
-            //for (int c = 0; c == contra.Length; c++)
-            //{
-            //    for (int u = 0; u == user.Length; u++)
-            //    {
-            //        if (password == contra[c] && username == user[u])
-            //        {
-            //            allowed = true;
-            //        }
-            //    }
-            //}
             if (allowed == true)
             {
                 firstCustomControl2.BringToFront();
