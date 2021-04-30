@@ -13,9 +13,10 @@ namespace FastFoodDemo
 
     public partial class Form1 : Form
     {
+        //Inicializando credenciales globales
         static string[] user = { "Fernanfloo", "JosueGuinea", "JhansiAguilar"};
         static string[] contra = { "chorizo", "auronplay", "rubius" };
-
+ 
         public Form1()
         {
             InitializeComponent();
@@ -25,13 +26,154 @@ namespace FastFoodDemo
             login2.BringToFront();
             textUsername.BringToFront();
             textPasswors.BringToFront();
-            button4.BringToFront();
+            btnIniciaSesion.BringToFront();
             alert.BringToFront();
             alert.Hide();
+            Alert3.Hide();
+
+        }
+        //Inicializando texto censurado para label Password
+        private void textBox2_TextChanged_1(object sender, EventArgs e)
+        {
+            textPasswors.UseSystemPasswordChar = true;
+        }
+        //checkeando si estan vacios los inputs
+        private bool CheckIfEmpty(string username, string password)
+        {
+            bool userRes = String.IsNullOrEmpty(username);
+            bool passwordRes = String.IsNullOrEmpty(password);
+            if (userRes && passwordRes)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+               
+            }
+        }
+        //Funcionalidad Login
+        static bool allowed = false;
+        private void Login(string username, string password)
+        {         
+            for (int i = 0; i < user.Length; i++)
+            {
+                if (user[i].Contains(username) && contra[i].Contains(password))
+                {
+                    alert.Hide();
+                    Alert3.Hide();
+                    alert2.Hide();
+
+                    allowed = true;
+                    firstCustomControl2.BringToFront();
+                }
+                else
+                {
+
+                    alert.BringToFront();
+                    alert.Show();
+                }
+
+            }
+            
+        }
+        //Evento de click al boton de inicio de sesion
+
+
+        private void btnIniciaSesion_Click(object sender, EventArgs e)
+        {
+             string username = textUsername.Text.Trim();
+             string password = textPasswors.Text.Trim();
+
+            bool emptyTextBoxes = CheckIfEmpty(username, password);
+
+            if (emptyTextBoxes)
+            {
+
+                alert.Hide();
+                Alert3.Hide();
+                alert2.BringToFront();
+                alert2.Show();
+            }
+            else
+            {
+                alert.Hide();
+                alert2.Hide();
+                Alert3.Hide();
+
+                Login(username, password);
+            }
         }
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             panel1.BringToFront();
+        }
+        //Checkeando si se puede traer al frente los demas componentes
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            if (!allowed)
+            {
+                alert.Hide();
+                alert2.Hide();
+                Alert3.BringToFront();
+                Alert3.Show();
+            }
+            else
+            {
+                alert.Hide();
+                alert2.Hide();
+                Alert3.Hide();
+                SidePanel.Show();
+                SidePanel.Height = button1.Height;
+                SidePanel.Top = button1.Top;
+                firstCustomControl2.BringToFront();
+            }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            if (!allowed)
+            {
+                alert.Hide();
+                alert2.Hide();
+                Alert3.BringToFront();
+                Alert3.Show();
+            }
+            else
+            {
+                alert.Hide();
+                alert2.Hide();
+                Alert3.Hide();
+                SidePanel.Show();
+                SidePanel.Height = button2.Height;
+                SidePanel.Top = button2.Top;
+                mySecondCustmControl11.BringToFront();
+            }
+
+
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+
+            if (!allowed)
+            {
+                alert.Hide();
+                alert2.Hide();
+                Alert3.BringToFront();
+                Alert3.Show();
+            }
+            else
+            {
+                alert.Hide();
+                alert2.Hide();
+                Alert3.Hide();
+                integrantesCustomControl11.BringToFront();
+                SidePanel.Hide();
+            }
         }
 
 
@@ -43,64 +185,6 @@ namespace FastFoodDemo
         {
 
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            SidePanel.Show();
-            SidePanel.Height = button1.Height;
-            SidePanel.Top = button1.Top;
-            firstCustomControl2.BringToFront();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            SidePanel.Show();
-            SidePanel.Height = button2.Height;
-            SidePanel.Top = button2.Top;
-            mySecondCustmControl11.BringToFront();
-         
-        }
-
-        private void button14_Click(object sender, EventArgs e)
-        {
-            integrantesCustomControl11.BringToFront();
-            SidePanel.Hide();
-        }
-        private void textBox2_TextChanged_1(object sender, EventArgs e)
-        {
-            textPasswors.UseSystemPasswordChar = true;
-        }
-        private void button4_Click(object sender, EventArgs e)
-        {
-            string username = textUsername.Text.Trim();
-            string password = textPasswors.Text.Trim();
-            bool emptyOrNot = String.IsNullOrEmpty(username);
-            bool emptyPassword = String.IsNullOrEmpty(password);
-
-            if (emptyOrNot && emptyPassword)
-            {
-                alert.Show();
-            }
-            else
-            {
-                for (int i = 0; i < user.Length; i++)
-                {
-                    if (user[i].Contains(username) && contra[i].Contains(password))
-                    {
-                        firstCustomControl2.BringToFront();
-                        alert.Hide();
-                    }
-                    else
-                    {
-                        alert.Show();
-                    }
-
-                }
-
-            }
-
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -187,6 +271,8 @@ namespace FastFoodDemo
         {
 
         }
+
+
     }
     }
 
